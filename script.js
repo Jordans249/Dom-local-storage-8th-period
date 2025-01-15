@@ -2,14 +2,14 @@
         const header = document.getElementById('header');
         const button = document.getElementById('click-button');
        
-//1.Add a comment here explaining the let clickCount variable  
+//1. it updates the clicks
         let clickCount = localStorage.getItem('clickCount') ? parseInt(localStorage.getItem('clickCount')) : 0;
 
         // Update display on load
         clickCountDisplay.textContent = clickCount;
         updateUI();
 
-//2.Explain what this event listener function does (and what function it calls).
+//2.handles the events as the primary
         // Add event listener to button
         button.addEventListener('click', () => {
             clickCount++;
@@ -18,7 +18,7 @@
             updateUI();
         });
 
-//3.Explain what function updateUI does and is holding the colors and texts
+//3.alters the color of text and background
         function updateUI() {
             const colors = ['#FF5733', '#33FF57', '#3357FF', '#F5A623', '#E91E63'];
             const texts = [
